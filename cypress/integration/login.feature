@@ -6,7 +6,8 @@ Feature: Login SauceDemo Functionality
     When I add login data
     |user | password |
     |standard_user | secret_sauce   |
-    Then validate the form values
+    Then user 'standard_user' is present
+    And login button is enabled
     And navigate to home page
     And app logo is present
     And products are present
@@ -18,7 +19,8 @@ Feature: Login SauceDemo Functionality
     When I add login data
     |user | password |
     |problem_user | secret_sauce   |
-    Then validate the form values
+    Then user 'problem_user' is present
+    And login button is enabled
     And navigate to home page
     And app logo is present
     And products are present

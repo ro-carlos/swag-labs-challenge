@@ -4,20 +4,22 @@ import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 
 
 const loginPage = new LoginPage();
-let username;
 
 Given('I open Sauce Demo Page', () => {
     cy.visit(Cypress.env('url') + "/");
 });
 
 When('I add login data', function (dataTable) {
-    username = dataTable.rawTable[1][0];
-    loginPage.getUsername().type(username);
+    loginPage.getUsername().type(dataTable.rawTable[1][0]);
     loginPage.getPassword().type(dataTable.rawTable[1][1]);
 });
 
-Then('validate the form values', function () {
-    loginPage.getUsername().should('have.value', username);
+Then('user {string} is present', function (expectedUsername) {
+    loginPage.getUsername().should('have.value', expectedUsername);
+    loginPage.getLoginButton().should('be.enabled');
+});
+
+Then('login button is enabled', function () {
     loginPage.getLoginButton().should('be.enabled');
 });
 
