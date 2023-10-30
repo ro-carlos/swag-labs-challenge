@@ -135,8 +135,14 @@ cucumberReports/
 # Videos
 videos/
 
+# Screenshots
+screenshots/
+
 # Downloads
 downloads/
 
 # DS Store
-cypress/integration/.DS_Store
+.DS_Store
+
+# view
+view

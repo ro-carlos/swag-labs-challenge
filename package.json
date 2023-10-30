@@ -9,9 +9,9 @@
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": false,
     "stepDefinitions": "cypress/integration/stepDefinitions/**",
-    "json": {
-      "enabled": true,
-      "output": "cypress/cucumberReports/results.json"
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/cucumberReports/results.json"
     }
   },
   "author": "Carlos Rodríguez",
