@@ -24,3 +24,21 @@ Then('open burger menu', function () {
 Then('logout user', function () {
     homePage.getLogoutButton().click();
 });
+
+Then('item {string} is present', function (itemDescription) {
+    homePage.getItem(itemDescription).should('be.visible');
+});
+
+Then('add item {string} to cart', function (itemDescription) {
+    homePage.getItemCartButton(itemDescription).click();
+});
+
+Then('shopping cart {string} item is present', function (numberOfItems) {
+    homePage.getShopingCartLink().should(($el) =>{
+        expect($el).to.contain(numberOfItems);
+    });
+});
+
+Then('navigate to shopping cart page', function () {
+    homePage.getShopingCartLink().click();
+});

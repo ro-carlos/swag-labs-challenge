@@ -1,4 +1,4 @@
-Feature: Login SauceDemo Functionality
+Feature: Logout SauceDemo Functionality
 
     @Smoke
     Scenario: Logging out the application with standard_user
