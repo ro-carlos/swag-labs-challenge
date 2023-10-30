@@ -10,6 +10,14 @@ class HomePage {
     getShoppingCart(){
         return cy.get('.shopping_cart_link');
     }
+
+    getBurgerMenuButton(){
+        return cy.get('#react-burger-menu-btn');
+    }
+
+    getLogoutButton(){
+        return cy.get('#logout_sidebar_link');
+    }
 }
 
 export default HomePage;

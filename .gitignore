@@ -137,3 +137,6 @@ videos/
 
 # Downloads
 downloads/
+
+# DS Store
+cypress/integration/.DS_Store

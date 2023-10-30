@@ -1,4 +1,4 @@
-Feature: End to end SauceDemo validation
+Feature: Login SauceDemo Functionality
 
     @Smoke
     Scenario: Logging into the application with standard_user
