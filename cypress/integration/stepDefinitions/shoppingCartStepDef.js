@@ -11,3 +11,7 @@ Then('item {string} is present in shopping cart', function (itemDescription) {
 Then('remove item {string} from cart', function (itemDescription) {
     shoppingCartPage.getRemoveItemFromCartButton(itemDescription).click();
 });
+
+Then('checkout item', function () {
+    shoppingCartPage.getCheckoutButton().click();
+});
